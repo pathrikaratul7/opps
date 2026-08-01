@@ -20,6 +20,8 @@
         
         public abstract void Calling(string mobile);
         public abstract void Msg(string msg, string DND,string mobile);
+        public abstract decimal CheckBalance(string mobile);
+
         
 
         protected bool validateMobileNumber(string Mobile)
@@ -66,7 +68,12 @@
 
 
         }
+        public override decimal CheckBalance(string mobile)
+        {
 
+            Console.WriteLine("Check balance");
+            return 1000;
+        }
 
 
     }
@@ -87,7 +94,12 @@
 
 
         }
+        public override decimal CheckBalance(string mobile)
+        {
 
+            Console.WriteLine("Check balance");
+            return 1000;
+        }
     }
     public class Iphone : Mobile
     {
@@ -110,8 +122,13 @@
         {
             Console.WriteLine("calling from child");
         }
-        
 
+        public override decimal CheckBalance(string mobile)
+        {
+
+            Console.WriteLine("Check balance");
+            return 1000;
+        }
 
     }
 
